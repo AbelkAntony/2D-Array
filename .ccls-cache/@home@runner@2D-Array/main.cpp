@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	srand(time(0));
+	int x,y;
+	int lowerLimit = -100;
+	int upperLimit = 100;
+	cout<<"\nENTER X VALUE OF ARRAY : ";
+	cin>>x;
+	cout<<"\nENTER Y VALUE OF ARRAY : ";
+	cin>>y;
+	int array[x][y];
+	for(int i=0;i<x;i++)
+	{
+		for(int j=0;j<y;j++)
+		{
+			array[i][j]=lowerLimit+(rand()%(upperLimit-lowerLimit+1));
+		}
+	}
+	//display array
+	for(int i=0;i<x;i++)
+	{
+		for(int j=0;j<y;j++)
+		{
+			cout<<array[i][j]<<" ";	
+		}
+		cout<<endl;
+	}
+	
+}
